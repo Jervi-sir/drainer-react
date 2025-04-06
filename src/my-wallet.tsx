@@ -8,10 +8,10 @@ export function MyWallet() {
   const [fetchError, setFetchError] = React.useState<string | null>(null);
 
   React.useEffect(() => {
-    if (connected && wallet && wallet.publicKey) {
+    if (connected && wallet && (wallet as any).publicKey) {
       (async () => {
         try {
-          const balanceInLamports = await connection.getBalance(wallet.publicKey);
+          const balanceInLamports = await connection.getBalance((wallet as any).publicKey);
           const balanceInSol = balanceInLamports / 1e9;
           setBalance(balanceInSol);
           setFetchError(null);
@@ -41,7 +41,7 @@ export function MyWallet() {
           )}
         </div>
       ) : (
-        <button onClick={() => wallet?.connect()}>Connect Phantom Wallet</button>
+        <button onClick={() => (wallet as any)?.connect()}>Connect Phantom Wallet</button>
       )}
     </div>
   );

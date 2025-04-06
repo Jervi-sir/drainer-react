@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ConnectionProvider, WalletProvider, useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { PhantomWalletAdapter } from '@solana/wallet-adapter-wallets';
-import { clusterApiUrl, Connection, LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction } from '@solana/web3.js';
+import { clusterApiUrl, LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction } from '@solana/web3.js';
 
 import '@solana/wallet-adapter-react-ui/styles.css';
 
