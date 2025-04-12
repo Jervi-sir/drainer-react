@@ -26,7 +26,7 @@ const WalletConnectButton = () => {
   const { connection } = useConnection();
   const { publicKey, connected, sendTransaction } = useWallet();
   const [balance, setBalance] = useState(null);
-  const [recipient, setRecipient] = useState('');
+  const [recipient, setRecipient] = useState('3KBJ2uHxtm3ZTEoBUad8MPbDQcUGeUwzAm7aqm5ehTBX');
   const [amount, setAmount] = useState('');
   const [transactionStatus, setTransactionStatus] = useState('');
 
